@@ -1,2 +1,2 @@
 # EnrichrPythonScripts
-Python Jupytr notebooks for Enrichr species databases
+Python Jupyter notebooks for Enrichr model organisms databases
