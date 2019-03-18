@@ -1,1 +1,4 @@
 *.DS_Store
+/Enrichr/gmt/
+/Enrichr/reference/
+/Enrichr/.ipynb_checkpoints/
