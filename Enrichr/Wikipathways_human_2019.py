@@ -5,7 +5,7 @@ def main():
     wp_gmt = open('gmt/wikipathways-20190310-gmt-Homo_sapiens.gmt.txt').readlines()[1:]
     # noinspection PyTypeChecker
     human_gene = defaultdict(lambda: '', dict(
-        line.split('\t')[1:3] for line in open('reference/Mus_musculus.gene_info').readlines()[1:] if
+        line.split('\t')[1:3] for line in open('reference/Homo_sapiens.gene_info').readlines()[1:] if
         line.split('\t')[9] == 'protein-coding'))
 
     template = '{0}_{1}\t\t{2}\n'
