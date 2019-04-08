@@ -5,7 +5,8 @@ from collections import defaultdict
 
 
 def main():
-    for pwid in ['hsa', 'dme', 'dre', 'cel', 'sce', 'mmu']:
+    # 'hsa', 'dme'
+    for pwid in ['dre', 'cel', 'sce', 'mmu']:
         human_pathways = REST.kegg_list('pathway', pwid).read()
 
         pathways = [line for line in human_pathways.strip().split('\n')]
@@ -26,13 +27,13 @@ def main():
 
                 if current_section == 'GENE':
                     if len(line[12:].split('; ')) > 1:
-                        gene_identifiers, gene_description = line[12:].split('; ')
+                        gene_identifiers, *gene_description = line[12:].split('; ')
                         gene_id, gene_symbol = gene_identifiers.split()
                         pathways_dict[description.split(' - ')[0]].append(gene_symbol)
 
         with open('in/{0}.gmt'.format(pwid), 'w') as pw_file:
-            out_pw = ['{0}\t\t{1}\n'.format(desc, '\t'.join(pathways_dict[desc]))
-                      for desc in pathways if len(pathways_dict[desc]) > 4]
+            out_pw = ['{0}\t\t{1}\n'.format(desc, '\t'.join(sorted(pathways_dict[desc])))
+                      for desc in sorted(pathways_dict) if len(pathways_dict[desc]) > 4]
             pw_file.writelines(out_pw)
     return None
 

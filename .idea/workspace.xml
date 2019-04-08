@@ -11,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/EnrichrPythonScripts$kegg.coverage" NAME="kegg Coverage Results" MODIFIED="1554739508042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Enrichr" />
+    <SUITE FILE_PATH="coverage/EnrichrPythonScripts$kegg.coverage" NAME="kegg Coverage Results" MODIFIED="1554742277520" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Enrichr" />
     <SUITE FILE_PATH="coverage/EnrichrPythonScripts$Wikipathways_human_2019.coverage" NAME="Wikipathways_human_2019 Coverage Results" MODIFIED="1552925647820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Enrichr" />
     <SUITE FILE_PATH="coverage/EnrichrPythonScripts$gwas_catalog.coverage" NAME="gwas_catalog Coverage Results" MODIFIED="1554682863794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Enrichr" />
   </component>
@@ -34,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Enrichr/kegg.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="435">
+              <caret line="29" column="83" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="83" />
               <folding>
                 <element signature="e#30#55#0" expanded="true" />
               </folding>
@@ -144,7 +144,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/Enrichr/gmt/gwas_catalog.gmt&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/gmt/WikiPathways_2019_Mouse.gmt&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/gmt/GWAS_Catalog_2019.gmt&#10;true&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/in/gwas_catalog_v1.0.2-associations_e95_r2019-03-01.tsv&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/temp.txt" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/Enrichr/gmt/gwas_catalog.gmt&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/gmt/WikiPathways_2019_Mouse.gmt&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/gmt/GWAS_Catalog_2019.gmt&#10;true&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/in/gwas_catalog_v1.0.2-associations_e95_r2019-03-01.tsv&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/temp.txt&#10;/Users/maximkuleshov/Work/EnrichrPythonScripts/Enrichr/in/hsa.gmt" />
     <property name="last.edited.regexp" value="a\b,c" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -244,16 +244,15 @@
       <workItem from="1553876125716" duration="1097000" />
       <workItem from="1554327420788" duration="267000" />
       <workItem from="1554682720187" duration="2474000" />
-      <workItem from="1554736085383" duration="1220000" />
+      <workItem from="1554736085383" duration="2568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35563000" />
+    <option name="totallyTimeSpent" value="36911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3104435" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -261,7 +260,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3299363" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,8 +281,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="line[12:].split('; ')" language="Python" />
+        <watch expression="gene_identifiers, *gene_description = line[12:].split('; ')" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>gene_identifiers, *gene_description = line[12:].split('; ')</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>line[12:].split('; ')</expression-string>
         <language-id>Python</language-id>
@@ -389,10 +401,15 @@
     <entry file="file://$PROJECT_DIR$/Enrichr/in/hsa.gmt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Enrichr/in/dme.gmt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Enrichr/kegg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="435">
+          <caret line="29" column="83" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="83" />
           <folding>
             <element signature="e#30#55#0" expanded="true" />
           </folding>
