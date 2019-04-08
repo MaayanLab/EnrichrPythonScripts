@@ -29,10 +29,11 @@ def main():
                         gene_identifiers, gene_description = line[12:].split('; ')
                         gene_id, gene_symbol = gene_identifiers.split()
                         pathways_dict[description.split(' - ')[0]].append(gene_symbol)
-            with open('in/{0}.gmt'.format(pwid), 'w') as pw_file:
-                out_pw = ['{0}\t\t{1}\n'.format(desc, '\t'.join(pathways_dict[desc]))
-                          for desc in pathways if len(pathways_dict[desc]) > 4]
-                pw_file.writelines(out_pw)
+
+        with open('in/{0}.gmt'.format(pwid), 'w') as pw_file:
+            out_pw = ['{0}\t\t{1}\n'.format(desc, '\t'.join(pathways_dict[desc]))
+                      for desc in pathways if len(pathways_dict[desc]) > 4]
+            pw_file.writelines(out_pw)
     return None
 
 
