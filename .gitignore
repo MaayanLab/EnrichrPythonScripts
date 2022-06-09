@@ -1,7 +1,10 @@
 *.DS_Store
-.idea
+/.idea/
+*.gmt
 /Enrichr/gmt/
 /Enrichr/reference/
 /Enrichr/.ipynb_checkpoints/
 /Enrichr/in/
+/Enrichr/out
 /temp.txt
+/venv
